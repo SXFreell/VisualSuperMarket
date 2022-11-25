@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超市数据可视分析与自动设计平台</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <style>
+        .text {
+            font-size: 72px;
+            font-weight: bold;
+            text-transform: uppercase;
+            fill: none;
+            stroke-width: 2px;
+            stroke-dasharray: 90 310;
+            animation: stroke 8s infinite linear;
+        }
+
+        .text-1 {
+            stroke: #3498db;
+            text-shadow: 0 0 5px #3498db;
+            animation-delay: -2s;
+        }
+
+        .text-2 {
+            stroke: #f39c12;
+            text-shadow: 0 0 5px #f39c12;
+            animation-delay: -4s;
+        }
+
+        .text-3 {
+            stroke: #e74c3c;
+            text-shadow: 0 0 5px #e74c3c;
+            animation-delay: -6s;
+        }
+
+        .text-4 {
+            stroke: #9b59b6;
+            text-shadow: 0 0 5px #9b59b6;
+            animation-delay: -8s;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+    </style>
+    <!-- Coded BY Freell(https://freell.top) -->
+</head>
+
+<body>
+    <div id="part0">
+        <div class="bg">
+            <div class="block">XSyyds</div>
+            <div class="title">
+                <span>超市数据</span>
+                <svg style="width: 300px;" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <text text-anchor="middle" x="50%" y="50%" class="text text-1">
+                        可视分析
+                    </text>
+                    <text text-anchor="middle" x="50%" y="50%" class="text text-2">
+                        可视分析
+                    </text>
+                    <text text-anchor="middle" x="50%" y="50%" class="text text-3">
+                        可视分析
+                    </text>
+                    <text text-anchor="middle" x="50%" y="50%" class="text text-4">
+                        可视分析
+                    </text>
+                    <!-- Copy FROM SaltedFish(https://saltedfish.fun) -->
+                </svg>
+                <span>与</span>
+                <svg style="width: 300px;" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <text text-anchor="middle" x="50%" y="50%" class="text text-1">
+                        自动设计
+                    </text>
+                    <text text-anchor="middle" x="50%" y="50%" class="text text-2">
+                        自动设计
+                    </text>
+                    <text text-anchor="middle" x="50%" y="50%" class="text text-3">
+                        自动设计
+                    </text>
+                    <text text-anchor="middle" x="50%" y="50%" class="text text-4">
+                        自动设计
+                    </text>
+                    <!-- Copy FROM SaltedFish(https://saltedfish.fun) -->
+                </svg>
+                <span>平台</span>
+            </div>
+            <div class="us">
+                <div class="usinner">
+                    <div class="us-title">小组成员</div>
+                    <div class="us-content">谢秋豪&emsp;徐朔&emsp;王柳潇&emsp;孙百乐</div>
+                </div>
+            </div>
+        </div>
+        <div class="start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </div>
+        <div class="vlrout">
+            <div class="vleft">
+                <p style="text-align: left;">
+                    <font color="#1496d4" size="5"><b>背景介绍：</b></font>
+                </p>
+                <p style="text-align: left;"><span style="font-size: large;">数据源：亚马逊2011-2014年度部分订单数据</span></p>
+                <p style="text-align: left;">
+                    <font size="4">订单时间：2011年1月 – 2014年12月，</font><span style="font-size: large;">数据维度: 共计24项。</span>
+                </p>
+                <p style="text-align: left;">
+                    <font size="4"><br></font>
+                </p>
+                <p style="text-align: left;">
+                    <font size="5" color="#1496d4"><b>分析思路 &amp; 报告结构：</b></font>
+                </p>
+                <p style="text-align: left;">
+                    <font size="4">1. <b>
+                            <font color="#0a8f08">超市数据概览</font>
+                        </b>：时间、商品品类、地理位置等维度</font>
+                </p>
+                <p style="text-align: left;">
+                    <font size="4">2. <b>
+                            <font color="#0a8f08">具体业务场景分析</font>
+                        </b>：<b>品类销售情况、客户消费行为、经销商绩效</b></font>
+                </p>
+                <p style="text-align: left;">
+                    <font size="4">3. <b>
+                            <font color="#0a8f08">自动设计</font>
+                        </b>：复现了Draco这篇论文，它可以将可视化的设计准则表达为约束，用求解器进行优化，生成最佳效果的可视化图表。</font>
+                </p>
+            </div>
+            <div class="vright">
+                <p style="text-align: left;">
+                    <font color="#1496d4" size="5"><b>应用价值：</b></font>
+                </p>
+                <p>
+                    <font size="1">&nbsp;</font>
+                </p>
+                <p>
+                    <font size="4">1. <b>战略型报表</b>：数据概览，帮助读者（尤其是管理者）快速地、一目了然地掌握企业的销售情况，并辅助其判断和决策。</font>
+                </p>
+                <p>
+                    <font size="4">2. <b>分析型报表</b>：从商品、客户、经销商三个主体出发，结合多维度数据，帮助读者深入分析业务，发现日常运营中的亮点与不足，扬长避短。</font>
+                </p>
+                <p>
+                    <font size="4">3. <b>销量预测</b>：综合历史销量趋势和季节因素，合理预测销量，辅助决策者拟定战略性目标。</font>
+                </p>
+                <p>
+                    <font size="4">4. <b>行业拓展</b>：除了线下超市以外，本报告还可拓展至其他的线下销售行业、线上电商平台，辅助管理层决策、平台日常运营。</font>
+                </p>
+                <p style="text-align: left;">
+                    <font color="#1496d4" size="5"><b>&nbsp;</b></font>
+                </p>
+            </div>
+        </div>
+        <div class="vlrout2">
+            <button class="button" onclick="topart1()"><span>销售数据可视化 </span></button>
+            <button class="button" onclick="topart2()"><span>可视化自动设计 </span></button>
+        </div>
+    </div>
+    <div id="part1"></div>
+    <div id="part2"></div>
+    <script>
+        var topart1 = function () {
+            $('#part0').hide();
+            $('#part1').load('./gaikuang.html');
+            $('#part1').show();
+        }
+        var topart2 = function () {
+            $('#part0').hide();
+            $('#part2').load('./sheji.html');
+            $('#part2').show();
+        }
+        var toback = function () {
+            $('#part1').hide();
+            $('#part1').empty();
+            $('#part2').hide();
+            $('#part2').empty();
+            $('#part0').show();
+        }
+    </script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/anime.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- Coded BY Freell(https://freell.top) -->
+</body>
+
+</html>

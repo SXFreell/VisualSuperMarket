@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>销售数据可视化</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <link href="./css/style-0.css" rel="stylesheet">
+    <!-- Coded BY Freell(https://freell.top) -->
+</head>
+
+<body>
+    <div class="top mybox">
+        <div class="mycol mycol-l">
+            <div class="title">销售额与利润折线图</div>
+            <div class="mycontent" id="zhexiantu"></div>
+        </div>
+        <div class="mycol mycol-c mainbox">
+            <div class="title"><span class="toback" onclick="toback()">
+                    <返回</span> <span class="tt">超市销售数据可视化
+                </span></div>
+            <div class="mycontent" id="all">
+                <div class="left">
+                    <div class="boxcenter">
+                        <span class="countryname" style="font-weight: bold;color: #1D3557;"></span>
+                        <div class="ltitle">
+                            <select class="form-select" onChange="selectYear(this.value)" id="selectyear">
+                                <option value="0">全部</option>
+                            </select>
+                            <span>&nbsp;年累计销售额</span>
+                        </div>
+                        <div class="xse">$<span id="sales">*,***,***</span></div>
+                        <div class="tb">同比<span id="salesChange"></span></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="rtop">
+                        <div class="boxcenter">
+                            <div class="ltitle">利润</div>
+                            <div class="xse">$<span id="profit">*,***,***</span></div>
+                            <div class="tb">同比<span id="profitChange"></span></div>
+                        </div>
+                    </div>
+                    <div class="rbottom">
+                        <div class="boxcenter">
+                            <div class="ltitle">销售量</div>
+                            <div class="xse"><span id="quantity">*,***</span></div>
+                            <div class="tb">同比<span id="quantityChange"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mycol mycol-r">
+            <div class="title"><span class="syear"></span>各品类物品销售数据</div>
+            <span class="countryname" style="font-weight: bold;color: #1D3557;"></span>
+            <div class="mycontent" id="zhuzhuangtu"></div>
+        </div>
+    </div>
+    <div class="bottom mybox">
+        <div class="mycol mycol-lc">
+            <div class="title">各国家2011-2014年总销售额地图</div>
+            <div class="mycontent">
+                <!-- <div id="observablehq-data-445c08ee"></div>
+                <div id="observablehq-cData-445c08ee"></div>
+                <div id="observablehq-viewof-colorInterpolator-445c08ee"></div> -->
+                <div class="map" id="observablehq-worldmap-445c08ee" style="margin-bottom: 4em;"></div>
+                <!-- <div id="observablehq-salesData-445c08ee"></div>
+                <div id="observablehq-rename-445c08ee"></div>
+                <div id="observablehq-color-445c08ee"></div>
+                <div id="observablehq-dataDomain-445c08ee"></div>
+                <div id="observablehq-projection-445c08ee"></div>
+                <div id="observablehq-path-445c08ee"></div>
+                <div id="observablehq-d3-445c08ee"></div>
+                <div id="observablehq-d3Tip-445c08ee"></div>
+                <div id="observablehq-topojson-445c08ee"></div> -->
+
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+                <script type="module">
+                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@1906030114/map@269.js?v=3";
+                    new Runtime().module(define, name => {
+                    //   if (name === "data") return new Inspector(document.querySelector("#observablehq-data-445c08ee"));
+                    //   if (name === "cData") return new Inspector(document.querySelector("#observablehq-cData-445c08ee"));
+                    //   if (name === "viewof colorInterpolator") return new Inspector(document.querySelector("#observablehq-viewof-colorInterpolator-445c08ee"));
+                    if (name === "worldmap") return new Inspector(document.querySelector("#observablehq-worldmap-445c08ee"));
+                    //   if (name === "salesData") return new Inspector(document.querySelector("#observablehq-salesData-445c08ee"));
+                    //   if (name === "rename") return new Inspector(document.querySelector("#observablehq-rename-445c08ee"));
+                    //   if (name === "color") return new Inspector(document.querySelector("#observablehq-color-445c08ee"));
+                    //   if (name === "dataDomain") return new Inspector(document.querySelector("#observablehq-dataDomain-445c08ee"));
+                    //   if (name === "projection") return new Inspector(document.querySelector("#observablehq-projection-445c08ee"));
+                    //   if (name === "path") return new Inspector(document.querySelector("#observablehq-path-445c08ee"));
+                    //   if (name === "d3") return new Inspector(document.querySelector("#observablehq-d3-445c08ee"));
+                    //   if (name === "d3Tip") return new Inspector(document.querySelector("#observablehq-d3Tip-445c08ee"));
+                    //   if (name === "topojson") return new Inspector(document.querySelector("#observablehq-topojson-445c08ee"));
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="mycol mycol-r">
+            <div class="title"><span class="syear"></span>各国家销售额排行</div>
+            <div class="mycontent" style="padding: 8px;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>国家</th>
+                            <th>销售额</th>
+                            <th>利润</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mytbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./js/echarts.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/gaikuang.js"></script>
+    <!-- Coded BY Freell(https://freell.top) -->
+</body>
+
+</html>

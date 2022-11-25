@@ -1,0 +1,12 @@
+{
+  "name": "visualsupermarket",
+  "version": "1.0.0",
+  "description": "Visual Super Market",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Freell",
+  "license": "ISC"
+}
