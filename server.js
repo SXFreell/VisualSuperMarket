@@ -6,7 +6,7 @@ let server = http.createServer(function (request, response) {
     //获取输入的url解析后的对象
     let pathname = url.parse(request.url, true).pathname;
     if (pathname == '/') {
-        pathname = '/name.html';
+        pathname = '/index.html';
     }
     //static文件夹的绝对路径
     let staticPath = path.resolve(__dirname);
